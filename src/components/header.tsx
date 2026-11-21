@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Menu, LogOut, ShieldAlert, User } from 'lucide-react';
 import { clearAdminAuth, getStoredAdmin } from '@/lib/auth';
 import { Button } from './ui/button';
+import { AdminNotificationDropdown } from './AdminNotificationDropdown';
 
 interface HeaderProps {
   onOpenMobileSidebar: () => void;
@@ -41,6 +42,9 @@ export function Header({ onOpenMobileSidebar, title }: HeaderProps) {
           <span className="text-muted">SuperAdmin:</span>
           <span className="font-semibold text-slate-200">{admin?.email || 'superadmin@elijah.ai'}</span>
         </div>
+
+        {/* SuperAdmin Platform Alerts Notification Bell */}
+        <AdminNotificationDropdown />
 
         <Button
           variant="ghost"
