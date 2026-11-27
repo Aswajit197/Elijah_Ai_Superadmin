@@ -10,8 +10,8 @@ import { setAdminAuth } from '@/lib/auth';
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('superadmin@elijah.ai');
+  const [password, setPassword] = useState('SuperSecretPassword123!');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
